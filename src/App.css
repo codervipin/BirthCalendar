@@ -8,3 +8,23 @@
 .date{
   color: black;
 }
+.wrapper{
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.birthday{
+  height: 500px;
+  border: solid red;
+  position: relative;
+}
+/* .birthday h1{
+  position: sticky;
+  top: 0;
+} */
+.birthday .container{
+  height: 80%;
+  overflow-y: scroll;
+}
