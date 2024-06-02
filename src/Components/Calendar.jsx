@@ -8,8 +8,10 @@ import BIrthDay from "./BIrthDay";
 const calendar = () => {
   const [value, setValue] = useState(new Date());
   const [apiData,setApiData] = useState([]);
-  const month = format(value, "MM");;
+  const month = format(value, "MM");
   const day  = format(value, "dd");
+
+  const [favourite,setFavourite] = useState([]);
   //   console.log(value.getDate());
   // console.log(value.getMonth() + 1);
 
@@ -40,7 +42,7 @@ const calendar = () => {
         data.births.forEach(birth => {
           birth.pages.forEach(page => {
             // console.log(page.normalizedtitle);
-            console.log(page.title);
+            // console.log(page.title);
             titles.push(page.title)
             
           })
@@ -50,8 +52,9 @@ const calendar = () => {
       })
   }
 
-      console.log(apiData);
+      // console.log(apiData);
 
+      console.log(favourite);
       useEffect(()=>{
           loadData(month,day);
       },[value]);
@@ -68,7 +71,7 @@ const calendar = () => {
           />
           {/* <p>Selected Date = {value.getDate()}</p> */}
       </LocalizationProvider>
-        <BIrthDay data={apiData}/>
+        <BIrthDay data={{apiData,setFavourite}}/>
       </div>
     
   );

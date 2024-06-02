@@ -28,3 +28,8 @@
   height: 80%;
   overflow-y: scroll;
 }
+
+.birthday .container p button{
+  width: 180px;
+  margin-left: 1em;
+}
