@@ -9,14 +9,16 @@
   color: black;
 }
 .wrapper{
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 3em;
 }
 
 .birthday{
   height: 500px;
+  width: 400px;
   border: solid red;
   position: relative;
 }
@@ -32,4 +34,15 @@
 .birthday .container p button{
   width: 180px;
   margin-left: 1em;
+}
+
+.favouriteBirth{
+  width: 400px;
+  height: 500px;
+  border: solid;
+  overflow-y: scroll;
+}
+.favouriteBirth .container{
+  height: 80%;
+  overflow-y: scroll;
 }

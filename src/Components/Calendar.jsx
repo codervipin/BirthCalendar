@@ -23,7 +23,7 @@ const calendar = () => {
   // useEffect(()=>{
   //     birthDayData(month,day);
   // },[value])
-
+  
   const handleChange = (date) => {
     setValue(date);
 
@@ -54,11 +54,12 @@ const calendar = () => {
 
       // console.log(apiData);
 
-      console.log(favourite);
+      // console.log(favourite);
       useEffect(()=>{
           loadData(month,day);
       },[value]);
 
+      console.log(monthMap[month]);
   return (
     
     <div className="wrapper">
@@ -71,7 +72,16 @@ const calendar = () => {
           />
           {/* <p>Selected Date = {value.getDate()}</p> */}
       </LocalizationProvider>
-        <BIrthDay data={{apiData,setFavourite}}/>
+        <BIrthDay data={{apiData,favourite,setFavourite}}/>
+        <div className="favouriteBirth">
+          <h4>Favourites</h4>
+          <div className="container">
+            {favourite?.map((ele,idx)=>{
+              return <p key={idx+1}>{ele} </p>
+            })}
+
+          </div>
+        </div>
       </div>
     
   );
