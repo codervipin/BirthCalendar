@@ -59,7 +59,7 @@ const calendar = () => {
           loadData(month,day);
       },[value]);
 
-      console.log(monthMap[month]);
+      // console.log(monthMap[month]);
   return (
     
     <div className="wrapper">
